@@ -10,7 +10,9 @@
   "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
   "plugins": ["prettier", "@typescript-eslint"],
   "rules": {
+    "no-unused-labels": "off",
     "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/prefer-namespace-keyword": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "prettier/prettier": "error",

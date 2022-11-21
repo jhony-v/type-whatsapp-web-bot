@@ -21,6 +21,7 @@
     "build": "pnpm unbuild",
     "lint": "eslint --ext .ts,.js,.mjs,.cjs .",
     "prepack": "pnpm unbuild",
+    "start:example": "cd example && pnpm start",
     "watch": "node --watch ./example/index.mjs",
     "release": "pnpm lint && standard-version && git push --follow-tags && pnpm publish"
   },
@@ -39,6 +40,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/qrcode-terminal": "^0.12.0",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
     "eslint": "^8.27.0",
@@ -48,5 +50,12 @@
     "standard-version": "^9.5.0",
     "typescript": "^4.9.3",
     "unbuild": "^1.0.1"
+  },
+  "peerDependencies": {
+    "reflect-metadata": "^0.1.13"
+  },
+  "dependencies": {
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.18.3"
   }
 }
