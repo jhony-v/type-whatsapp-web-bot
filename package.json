@@ -1,0 +1,52 @@
+{
+  "name": "type-whatsapp-web-bot",
+  "version": "1.0.0",
+  "description": "Create your bot responses using the power of decorators and fast implementation",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm unbuild",
+    "lint": "eslint --ext .ts,.js,.mjs,.cjs .",
+    "prepack": "pnpm unbuild",
+    "watch": "node --watch ./example/index.mjs",
+    "release": "pnpm lint && standard-version && git push --follow-tags && pnpm publish"
+  },
+  "keywords": [
+    "whatsapp",
+    "decorators",
+    "bot",
+    "server"
+  ],
+  "author": {
+    "name": "jhony-v",
+    "url": "https://github.com/jhony-v"
+  },
+  "repository": {
+    "url": "https://github.com/jhony-v/type-whatsapp-web-bot"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "standard-version": "^9.5.0",
+    "typescript": "^4.9.3",
+    "unbuild": "^1.0.1"
+  }
+}
